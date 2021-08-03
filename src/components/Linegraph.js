@@ -65,6 +65,7 @@ const buildChartData = (data, casesType) => {
 
 function LineGraph({ casesType, className }) {
     const [data, setData] = useState({});
+    const color = casesType === 'recovered' ? 'green' : 'red'
 
     useEffect(() => {
         const fetchData = async () => {
@@ -88,9 +89,9 @@ function LineGraph({ casesType, className }) {
                     data={{
                         datasets: [
                             {
-                                label: '# of Cases',
+                                label: `# of total ${casesType}`,
                                 backgroundColor: "rgba(204, 16, 52, 0.5)",
-                                borderColor: "#CC1034",
+                                borderColor: color,
                                 data: data,
                             },
                         ],
