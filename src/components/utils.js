@@ -48,6 +48,7 @@ export const showDataOnMap = (data, casesType = "cases") =>
             radius={
                 Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier
             }
+            key={country.country}
         >
             <Popup>
                 <div className="info-container">

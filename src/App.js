@@ -60,7 +60,6 @@ function App() {
         setCountry(countryCode)
         setCountryInfo(data)
         if (countryCode !== 'worldwide') {
-          console.log(data.countryInfo.lat, data.countryInfo.long);
           setCenter([Number(data.countryInfo.lat), Number(data.countryInfo.long)]);
           setZoom(4);
         }
